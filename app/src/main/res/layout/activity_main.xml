@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<LinearLayout
+    android:id="@+id/quiz_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is your rj45 cable connected?"
+        android:textColor="#f111f111"
+        android:textSize="18sp" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/question1_choice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Yes" />
+
+        <RadioButton
+            android:id="@+id/question1_choice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="No" />
+
+        <RadioButton
+            android:id="@+id/question1_choice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="I do not know" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/question2_answer"
+        android:paddingTop="10dp"
+        android:text="Is your network card both led's blinking?"
+        android:textColor="#c33333ff"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/question2_answer"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/question3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Are you using DHCP or static settings?"
+        android:textColor="#ffff1111"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/question3_choice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DHCP" />
+
+    <CheckBox
+        android:id="@+id/question3_choice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Static" />
+
+    <CheckBox
+        android:id="@+id/question3_choice3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Sure!!" />
+
+    <TextView
+        android:id="@+id/question4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/question4_answer"
+        android:paddingTop="10dp"
+        android:text="What is your SSID?"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+
+    <EditText
+        android:id="@+id/question4_answer"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/question5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Who is your provider?"
+        android:textColor="#dd88dd"
+        android:textSize="18sp" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/question5_choice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cyta" />
+
+        <RadioButton
+            android:id="@+id/question5_choice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vodafone" />
+
+        <RadioButton
+            android:id="@+id/question5_choice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cosmote" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/question6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/question5_answer"
+        android:paddingTop="10dp"
+        android:text="What is yours DNS?"
+        android:textColor="#555555"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/question6_answer"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/submit_answers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="submitAnswers"
+        android:text="Score" />
+
+</LinearLayout>
+</ScrollView>
